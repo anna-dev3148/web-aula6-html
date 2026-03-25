@@ -1,0 +1,26 @@
+<svg width="200" height="180" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradienteBeleza" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="sombraSuave" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="130" y="10" width="60" height="60" stroke="black" stroke-width="4" fill="none" />
+
+  <rect x="30" y="60" width="60" height="60" stroke="yellow" stroke-width="2" fill="green" />
+
+  <rect x="100" y="110" width="70" height="70" rx="8" ry="8" fill="url(#gradienteBeleza)" filter="url(#sombraSuave)" />
+</svg>
